@@ -1,0 +1,14 @@
+{
+  "name": "scrape",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "puppeteer": "^21.0.3",
+    "url-slug": "^4.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.1"
+  }
+}
