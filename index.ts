@@ -32,7 +32,7 @@ const getTitle = ({
     return numberKey;
   }
 
-  return `${volumeString}, ${numberKey}, ${date}`;
+  return `Jamaica Journal ${volumeString}, ${numberKey}, ${date}`;
 };
 
 const main = async () => {
