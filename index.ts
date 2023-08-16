@@ -43,12 +43,9 @@ const main = async () => {
     defaultViewport: null,
   });
 
-  // await page.goto('https://ufdc.ufl.edu/title-sets/UF00090030');
-  // await page.waitForNetworkIdle();
-
-  // await browser.close();
-
   for (const group of volumes) {
+    // Grab numbers from strings, ignoring 'Volume(s)/Number(s)/No.'
+
     const volumeNumber = group.key.match(
       /(?:Volume)s?\s*(?<number>[\-\d]+)(?!\D$)/i
     )?.groups?.number;
@@ -57,8 +54,9 @@ const main = async () => {
       const number = item.text.match(
         /(?:Number|No)s?\.?\s*(?<number>[\-\d]+)(?!\D$)/i
       )?.groups?.number;
-      const audio = item.text.match(/Audio/i);
 
+      // Skip audio supplement
+      const audio = item.text.match(/Audio/i);
       if (audio) {
         continue;
       }
@@ -75,9 +73,11 @@ const main = async () => {
 
       const imgSrc = await page.evaluate(() => {
         return (
+          // Use first 'Front Cover' if available
           [...document!.querySelectorAll('figure')!]!
             .find(el => el?.innerText.match(/Front Cover/i))
             ?.querySelector('img')!.src ||
+          // Use first thumb as fallback
           (
             document.querySelector(
               '.thumbnails-page__content figure img'
