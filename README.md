@@ -16,7 +16,7 @@ Indexer
 yarn install && yarn index
 ```
 
-Are.na uploader (needs index)
+Are.na uploader (needs index, ARENA_CHANNEL, and ARENA_TOKEN environment variables)
 
 ```bash
 yarn upload
