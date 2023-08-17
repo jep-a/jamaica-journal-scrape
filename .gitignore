@@ -1,3 +1,4 @@
 node_modules
 .scrape
 .DS_Store
+.env
