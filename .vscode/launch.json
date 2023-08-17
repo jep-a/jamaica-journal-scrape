@@ -7,9 +7,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run-script", "dev"]
+      "name": "Launch current file",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["tsx", "${file}"]
     }
   ]
 }
