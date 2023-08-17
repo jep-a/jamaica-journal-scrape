@@ -8,6 +8,7 @@ const index: {
   number?: string;
   date: string;
   url: string;
+  imageUrl: string;
   title: string;
   filename: string;
 }[] = [];
@@ -112,6 +113,7 @@ const main = async () => {
         number,
         date,
         url: `https://ufdc.ufl.edu/UF00090030/${item.vid}`,
+        imageUrl: imgSrc,
         title,
         filename,
       };
