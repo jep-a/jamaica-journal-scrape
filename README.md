@@ -10,6 +10,14 @@ Grabs this data from the Jamaica Journal digital collection:
 
 Initial index (volumes.json) already grabbed from a React component's props on [ufdc.ufl.edu/title-sets/UF00090030](https://ufdc.ufl.edu/title-sets/UF00090030)
 
+Indexer
+
 ```bash
-yarn install && yarn dev
+yarn install && yarn index
+```
+
+Are.na uploader (needs index)
+
+```bash
+yarn upload
 ```
